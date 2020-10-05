@@ -1,0 +1,13 @@
+body{
+    background-image: url("../img/tlo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+#summaryComp{
+    border-top:5px solid whitesmoke ;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
