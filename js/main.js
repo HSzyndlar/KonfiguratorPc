@@ -38,6 +38,12 @@ const gfx = [
         price: 1139,
         producent: "Gigabyte",
     },
+    {
+        id:4,
+        name:"Gigabyte GeForce RTX 2060 OC 6GB GDDR6",
+        price: 1399,
+        producent: "Gigabyte",
+    },
 ]
 const pro = [
     {
