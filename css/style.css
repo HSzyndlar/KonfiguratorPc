@@ -20,3 +20,7 @@ table#summaryComp td
     border: 1px solid whitesmoke;
     border-collapse: collapse;
 }
+#summaryComp img {
+    width: 150px;
+    height: auto;
+}
