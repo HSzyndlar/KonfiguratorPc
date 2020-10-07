@@ -35,6 +35,14 @@
             </td>
         </tr>
         <tr>
+            <td>Ram</td>
+            <td>
+                <select name="ram" id="ram" onchange="SelectedItemValue('ram')">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td>Zasilacze</td>
             <td>
                 <select name="zasilacz" id="zasilacz" onchange="SelectedItemValue('zasilacz')">
@@ -54,13 +62,14 @@
     </section>
 
 
-    <section id="summaryComp">
-        <div id="summaryCpu"></div>
-        <div id="summaryMb"></div>
-        <div id="summaryGfx"></div>
-        <div id="summaryZasilacz"></div>
-        <div id="summaryObudowy"></div>
-    </section>
+    <table id="summaryComp">
+        <tr id="summaryCpu"></tr>
+        <tr id="summaryMb"></tr>
+        <tr id="summaryGfx"></tr>
+        <tr id="summaryRam"></tr>
+        <tr id="summaryZasilacz"></tr>
+        <tr id="summaryObudowy"></tr>
+    </table>
 
     <div id="summaryMainboard"></div>
     <div id="sumAll"></div>

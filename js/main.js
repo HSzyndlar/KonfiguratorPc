@@ -72,6 +72,27 @@ const pro = [
     },
 ]
 
+const ram = [
+    {
+        id:1,
+        name:"Gammix D10, DDR4, 16 GB, 3200MHz, CL16 ",
+        price: 289,
+        producent: "ADATA",
+    },
+    {
+        id:2,
+        name:"IRDM, DDR4, 16 GB, 3600MHz, CL17",
+        price: 327,
+        producent: "GoodRam ",
+    },
+    {
+        id:3,
+        name:"Vengeance RGB PRO, DDR4, 16 GB, 3200MHz, CL16",
+        price: 359,
+        producent: "Corsair ",
+    },
+]
+
 const zasilacz = [
     {
         id:1,
@@ -134,6 +155,10 @@ cart = [
         name:'obudowy',
         price: 0,
     },
+    {
+        name:'ram',
+        price: 0,
+    },
 ]
 
 
@@ -159,29 +184,34 @@ function SelectedItemValue(SelectId) {
     const summaryObudowy = document.getElementById("summaryObudowy")
 
     if (SelectId == "cpu") {
-        summaryCpu.innerHTML = pro[strAtt - 1].name + " " + pro[strAtt - 1].price
+        summaryCpu.innerHTML = " <td>"+ pro[strAtt - 1].name + "</td><td>" + pro[strAtt - 1].price+ "</td>"
         cart[2].price = pro[strAtt - 1].price
         cart[2].name = pro[strAtt - 1].name
     }
     else if (SelectId == "mb") {
-        summaryMb.innerHTML = mb[strAtt - 1].name + " " + mb[strAtt - 1].price
+        summaryMb.innerHTML = "<td>" + mb[strAtt - 1].name + "</td><td>" + mb[strAtt - 1].price+ "</td>"
         cart[0].price = mb[strAtt - 1].price
         cart[0].name = mb[strAtt - 1].name
        // document.getElementById("summaryMainboard").innerHTML="mainboard:"+cart[0].name+ " "+cart[0].price;
     }
     else if (SelectId == "gpu") {
-        summaryGfx.innerHTML = gfx[strAtt - 1].name + " " + gfx[strAtt - 1].price
+        summaryGfx.innerHTML = "<td>" + gfx[strAtt - 1].name + "</td><td>" + gfx[strAtt - 1].price+ "</td>"
         cart[1].price = gfx[strAtt - 1].price
         cart[1].name = gfx[strAtt - 1].name
     }
 
     else if (SelectId == "zasilacz") {
-        summaryZasilacz.innerHTML = zasilacz[strAtt - 1].name + " " + zasilacz[strAtt - 1].price
+        summaryZasilacz.innerHTML = "<td>" + zasilacz[strAtt - 1].name + "</td><td>" + zasilacz[strAtt - 1].price+ "</td>"
         cart[1].price = zasilacz[strAtt - 1].price
         cart[1].name = zasilacz[strAtt - 1].name
     }
     else if (SelectId == "obudowy") {
-        summaryObudowy.innerHTML = obudowy[strAtt - 1].name + " " + obudowy[strAtt - 1].price
+        summaryObudowy.innerHTML = "<td>"+obudowy[strAtt - 1].name + "</td><td>" + obudowy[strAtt - 1].price+ "</td>"
+        cart[1].price = obudowy[strAtt - 1].price
+        cart[1].name = obudowy[strAtt - 1].name
+    }
+    else if (SelectId == "ram") {
+        summaryObudowy.innerHTML = "<td>"+ram[strAtt - 1].name + "</td><td>" + ram[strAtt - 1].price+ "</td>"
         cart[1].price = obudowy[strAtt - 1].price
         cart[1].name = obudowy[strAtt - 1].name
     }
@@ -208,6 +238,9 @@ for (let i=0; i<zasilacz.length; i++){
 }
 for (let i=0; i<obudowy.length; i++){
     addOpt("obudowy", obudowy[i].id, obudowy[i].name)
+}
+for (let i=0; i<ram.length; i++){
+    addOpt("ram", ram[i].id, ram[i].name)
 }
 
 //document.write("mainboard:",cart[0].name, " ", cart[0].price)
