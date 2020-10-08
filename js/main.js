@@ -183,6 +183,16 @@ cart = [
 
 let summaryCompHandler = document.getElementById("summaryComp")
 
+function sumCart(koszyk){
+    console.log("Ilość elementów w Koszyku"+koszyk.length)
+    let cena = 0;
+
+    for(let i=0; i<koszyk.length; i++)
+        cena = cena + koszyk[i].price
+    return cena;
+
+}
+
 function addOpt(elem,optValue, textOpt) {
     let select1 = document.getElementById(elem);
     option = document.createElement("option");
@@ -237,7 +247,7 @@ function SelectedItemValue(SelectId) {
     else
     {}
 
-    document.getElementById("sumAll").innerHTML="<b>Suma:"+(cart[0].price+cart[1].price+cart[2].price)+"</b>"
+    document.getElementById("sumAll").innerHTML="<b>Suma:"+ sumCart(cart)+"zł</b>"
     //return(parseInt(strAtt));
 
 

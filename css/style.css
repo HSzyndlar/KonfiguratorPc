@@ -24,3 +24,6 @@ table#summaryComp td
     width: 130px;
     height: auto;
 }
+#sumAll{
+    position: absolute;
+}
