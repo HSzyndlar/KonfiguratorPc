@@ -62,7 +62,7 @@ const pro = [
         price: 699,
         producent: "Intel",
         socet: "1200",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "intel-core-i5-f-10.jpg"
     },
     {
         id:2,
@@ -70,7 +70,7 @@ const pro = [
         price: 1773,
         producent: "Intel",
         socet: "1200",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "Procesor-Intel-Core-i7-10700K.jpg"
     },
     {
         id:3,
@@ -78,7 +78,7 @@ const pro = [
         price: 929,
         producent: "Amd",
         socet: "AM4",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "AMD-Ryzen-5-3600.jpg"
     },
 ]
 
@@ -88,21 +88,21 @@ const ram = [
         name:"Gammix D10, DDR4, 16 GB, 3200MHz, CL16 ",
         price: 289,
         producent: "ADATA",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "Gammix-D10-DDR4-16GB.jpg"
     },
     {
         id:2,
         name:"IRDM, DDR4, 16 GB, 3600MHz, CL17",
         price: 327,
         producent: "GoodRam ",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "pamiec-dimm-ddr4-goodram.jpg"
     },
     {
         id:3,
         name:"Vengeance RGB PRO, DDR4, 16 GB, 3200MHz, CL16",
         price: 359,
         producent: "Corsair ",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "Vengeance-RGB-PRO.jpg"
     },
 ]
 
@@ -112,21 +112,21 @@ const zasilacz = [
         name:"SilentiumPC Vero L3 500W",
         price: 219,
         producent: "SilentiumPC",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "SilentiumPC-Vero-L3-500W.jpg"
     },
     {
         id:2,
         name:"be quiet! SYSTEM POWER 9 500W",
         price: 237,
         producent: "be quiet!",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "be-quiet!.jpg"
     },
     {
         id:3,
         name:"SilentiumPC Vero M3 600W ",
         price: 259,
         producent: "SilentiumPC",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "SilentiumPC-Vero-M3-600W.jpg"
     },
 ]
 const obudowy = [
@@ -135,21 +135,21 @@ const obudowy = [
         name:"SilentiumPC Signum SG7V TG ",
         price: 329,
         producent: "SilentiumPC",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "SilentiumPC-Signum.jpg"
     },
     {
         id:2,
         name:"SilentiumPC Signum SG7V Evo TG ARGB",
         price: 389,
         producent: "SilentiumPC",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "spc250-spc-signum-sg7v-evo-tg-argb-03.jpg"
     },
     {
         id:3,
         name:"Genesis Irid 400 ARGB",
         price: 359,
         producent: "Genesis",
-        img: "GIGABYTE-B450-Aorus-Elite-ATX.jpg"
+        img: "Genesis-Irid-400.jpg"
     },
 ]
 
@@ -203,7 +203,7 @@ function SelectedItemValue(SelectId) {
     const summaryObudowy = document.getElementById("summaryObudowy")
 
     if (SelectId == "cpu") {
-        summaryCpu.innerHTML = "<td><img src='img/"+mb[strAtt - 1].img+"'></td> "+" <td>"+ pro[strAtt - 1].name + "</td><td>" + pro[strAtt - 1].price+ "</td>"
+        summaryCpu.innerHTML = "<td><img src='img/"+pro[strAtt - 1].img+"'></td> "+" <td>"+ pro[strAtt - 1].name + "</td><td>" + pro[strAtt - 1].price+ "</td>"
         cart[2].price = pro[strAtt - 1].price
         cart[2].name = pro[strAtt - 1].name
     }
@@ -221,18 +221,18 @@ function SelectedItemValue(SelectId) {
 
     else if (SelectId == "zasilacz") {
         summaryZasilacz.innerHTML = "<td><img src='img/"+zasilacz[strAtt - 1].img+"'></td> "+" <td>" + zasilacz[strAtt - 1].name + "</td><td>" + zasilacz[strAtt - 1].price+ "</td>"
-        cart[1].price = zasilacz[strAtt - 1].price
-        cart[1].name = zasilacz[strAtt - 1].name
+        cart[3].price = zasilacz[strAtt - 1].price
+        cart[3].name = zasilacz[strAtt - 1].name
     }
     else if (SelectId == "obudowy") {
         summaryObudowy.innerHTML = "<td><img src='img/"+obudowy[strAtt - 1].img+"'></td> "+" <td>"+obudowy[strAtt - 1].name + "</td><td>" + obudowy[strAtt - 1].price+ "</td>"
-        cart[1].price = obudowy[strAtt - 1].price
-        cart[1].name = obudowy[strAtt - 1].name
+        cart[4].price = obudowy[strAtt - 1].price
+        cart[4].name = obudowy[strAtt - 1].name
     }
     else if (SelectId == "ram") {
-        summaryObudowy.innerHTML = "<td><img src='img/"+ram[strAtt - 1].img+"'></td> "+" <td>"+ram[strAtt - 1].name + "</td><td>" + ram[strAtt - 1].price+ "</td>"
-        cart[1].price = obudowy[strAtt - 1].price
-        cart[1].name = obudowy[strAtt - 1].name
+        summaryRam.innerHTML = "<td><img src='img/"+ram[strAtt - 1].img+"'></td> "+" <td>"+ram[strAtt - 1].name + "</td><td>" + ram[strAtt - 1].price+ "</td>"
+        cart[5].price = ram[strAtt - 1].price
+        cart[5].name = ram[strAtt - 1].name
     }
     else
     {}
