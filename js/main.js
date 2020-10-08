@@ -152,6 +152,29 @@ const obudowy = [
         img: "Genesis-Irid-400.jpg"
     },
 ]
+const monitor = [
+    {
+        id:1,
+        name:"Monitor Samsung S24R350",
+        price: 529,
+        producent: "Samsung",
+        img: "Samsung-S24R350.jpg"
+    },
+    {
+        id:2,
+        name:"Monitor Acer Nitro VG240Ybmiix",
+        price: 568,
+        producent: "Acer",
+        img: "Acer-Nitro.jpg"
+    },
+    {
+        id:3,
+        name:"Monitor LG 27GL850-B",
+        price: 2149,
+        producent: "LG",
+        img: "Monitor-LG.jpg"
+    },
+]
 
 cart = [
     {
@@ -176,6 +199,10 @@ cart = [
     },
     {
         name:'ram',
+        price: 0,
+    },
+    {
+        name:'monitor',
         price: 0,
     },
 ]
@@ -211,6 +238,7 @@ function SelectedItemValue(SelectId) {
     const summaryGfx = document.getElementById("summaryGfx")
     const summaryZasilacz = document.getElementById("summaryZasilacz")
     const summaryObudowy = document.getElementById("summaryObudowy")
+    const summaryMonitor = document.getElementById("summaryMonitor")
 
     if (SelectId == "cpu") {
         summaryCpu.innerHTML = "<td><img src='img/"+pro[strAtt - 1].img+"'></td> "+" <td>"+ pro[strAtt - 1].name + "</td><td>" + pro[strAtt - 1].price+ "</td>"
@@ -244,6 +272,11 @@ function SelectedItemValue(SelectId) {
         cart[5].price = ram[strAtt - 1].price
         cart[5].name = ram[strAtt - 1].name
     }
+    else if (SelectId == "monitor") {
+        summaryMonitor.innerHTML = "<td><img src='img/"+monitor[strAtt - 1].img+"'></td> "+" <td>"+monitor[strAtt - 1].name + "</td><td>" + monitor[strAtt - 1].price+ "</td>"
+        cart[6].price = monitor[strAtt - 1].price
+        cart[6].name = monitor[strAtt - 1].name
+    }
     else
     {}
 
@@ -271,5 +304,9 @@ for (let i=0; i<obudowy.length; i++){
 for (let i=0; i<ram.length; i++){
     addOpt("ram", ram[i].id, ram[i].name)
 }
+for (let i=0; i<monitor.length; i++){
+    addOpt("monitor", monitor[i].id, monitor[i].name)
+}
+
 
 //document.write("mainboard:",cart[0].name, " ", cart[0].price)

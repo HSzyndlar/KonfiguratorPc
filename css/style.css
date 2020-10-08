@@ -21,9 +21,11 @@ table#summaryComp td
     border-collapse: collapse;
 }
 #summaryComp img {
-    width: 130px;
+    width: 100px;
     height: auto;
 }
 #sumAll{
     position: absolute;
+    top: 5px;
+    right: 5px;
 }
