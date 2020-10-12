@@ -175,6 +175,76 @@ const monitor = [
         img: "Monitor-LG.jpg"
     },
 ]
+const glosnik = [
+    {
+        id:1,
+        name:"Logitech Z533",
+        price: 344,
+        producent: "Logitech",
+        img: "Logitech.jpg"
+    },
+    {
+        id:2,
+        name:"Trust GXT 606 JAVV RGB 2.0",
+        price: 107,
+        producent: "Trust",
+        img: "Trust.jpg"
+    },
+    {
+        id:3,
+        name:"Edifier M1360",
+        price: 139,
+        producent: "Edifier",
+        img: "Edifier.jpg"
+    },
+]
+const sluchawki = [
+    {
+        id:1,
+        name:"Genesis Neon 360 ",
+        price: 119,
+        producent: "Genesis",
+        img: "Genesis-Neon-360.jpg"
+    },
+    {
+        id:2,
+        name:"Logitech G332",
+        price: 179,
+        producent: "Logitech",
+        img: "Logitech-G332.jpg"
+    },
+    {
+        id:3,
+        name:"Corsair HS35 Stereo",
+        price: 219,
+        producent: "Corsair",
+        img: "Corsair-Hs35.jpg"
+    },
+]
+const mikrofon = [
+    {
+        id:1,
+        name:"Mikrofon Trust GXT 212 ",
+        price: 99,
+        producent: "Trust",
+        img: "Mikrofon-Trust-GXT-212.jpg"
+    },
+    {
+        id:2,
+        name:"Mikrofon Trust GXT 232 Mantis",
+        price: 102,
+        producent: "Trust",
+        img: "Mikrofon-Trust-GXT-232-Mantis.jpg"
+    },
+    {
+        id:3,
+        name:"Mikrofon SPC Gear SM900 USB",
+        price: 349,
+        producent: "SPC",
+        img: "Mikrofon-SPC-Gear-SM900-USB.jpg"
+    },
+]
+
 
 cart = [
     {
@@ -203,6 +273,18 @@ cart = [
     },
     {
         name:'monitor',
+        price: 0,
+    },
+    {
+        name:'glosnik',
+        price: 0,
+    },
+    {
+        name:'sluchawki',
+        price: 0,
+    },
+    {
+        name:'mikrofon',
         price: 0,
     },
 ]
@@ -239,6 +321,9 @@ function SelectedItemValue(SelectId) {
     const summaryZasilacz = document.getElementById("summaryZasilacz")
     const summaryObudowy = document.getElementById("summaryObudowy")
     const summaryMonitor = document.getElementById("summaryMonitor")
+    const summaryGlosnik = document.getElementById("summaryGlosnik")
+    const summarySluchawki = document.getElementById("summarySluchawki")
+    const summaryMikrofon = document.getElementById("summaryMikrofon")
 
     if (SelectId == "cpu") {
         summaryCpu.innerHTML = "<td><img src='img/"+pro[strAtt - 1].img+"'></td> "+" <td>"+ pro[strAtt - 1].name + "</td><td>" + pro[strAtt - 1].price+ "</td>"
@@ -277,6 +362,21 @@ function SelectedItemValue(SelectId) {
         cart[6].price = monitor[strAtt - 1].price
         cart[6].name = monitor[strAtt - 1].name
     }
+    else if (SelectId == "glosnik") {
+        summaryGlosnik.innerHTML = "<td><img src='img/"+glosnik[strAtt - 1].img+"'></td> "+" <td>"+glosnik[strAtt - 1].name + "</td><td>" + glosnik[strAtt - 1].price+ "</td>"
+        cart[7].price = glosnik[strAtt - 1].price
+        cart[7].name = glosnik[strAtt - 1].name
+    }
+    else if (SelectId == "sluchawki") {
+        summarySluchawki.innerHTML = "<td><img src='img/"+sluchawki[strAtt - 1].img+"'></td> "+" <td>"+sluchawki[strAtt - 1].name + "</td><td>" + sluchawki[strAtt - 1].price+ "</td>"
+        cart[8].price = sluchawki[strAtt - 1].price
+        cart[8].name = sluchawki[strAtt - 1].name
+    }
+    else if (SelectId == "mikrofon") {
+        summaryMikrofon.innerHTML = "<td><img src='img/"+mikrofon[strAtt - 1].img+"'></td> "+" <td>"+mikrofon[strAtt - 1].name + "</td><td>" + mikrofon[strAtt - 1].price+ "</td>"
+        cart[9].price = mikrofon[strAtt - 1].price
+        cart[9].name = mikrofon[strAtt - 1].name
+    }
     else
     {}
 
@@ -307,6 +407,17 @@ for (let i=0; i<ram.length; i++){
 for (let i=0; i<monitor.length; i++){
     addOpt("monitor", monitor[i].id, monitor[i].name)
 }
+for (let i=0; i<glosnik.length; i++){
+    addOpt("glosnik", glosnik[i].id, glosnik[i].name)
+}
+for (let i=0; i<sluchawki.length; i++){
+    addOpt("sluchawki", sluchawki[i].id, sluchawki[i].name)
+}
+    for (let i=0; i<mikrofon.length; i++){
+        addOpt("mikrofon", mikrofon[i].id, mikrofon[i].name)
+}
+
+
 
 
 //document.write("mainboard:",cart[0].name, " ", cart[0].price)
