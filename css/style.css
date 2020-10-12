@@ -13,17 +13,35 @@ body{
 }
 table#summaryComp{
     width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
 }
+table#summaryComp td{
+    text-align: center;
+}
+table#summaryComp td:nth-child(1){
+    width: 15%;
+}
+table#summaryComp td:nth-child(2){
+    width: 70%;
+}
+table#summaryComp td:nth-child(3){
+    width: 15%;
+}
+
+
 table#summaryComp,
 table#summaryComp td
 {
     border: 1px solid whitesmoke;
     border-collapse: collapse;
+
 }
 #summaryComp img {
     width: 100px;
     height: auto;
 }
+
 #sumAll{
     position: absolute;
     top: 5px;
